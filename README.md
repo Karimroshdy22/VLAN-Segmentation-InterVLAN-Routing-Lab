@@ -27,52 +27,10 @@ The topology was created in **Cisco Packet Tracer**, and it includes:
 ## ⚙️ Devices Configuration
 
 ### 🔸 VLAN Configuration on Switch
-See full configuration in [`switch-config.txt`](Switch> enable
-Switch# configure terminal
-
-# Create VLANs
-vlan 10
- name HR
-vlan 20
- name Sales
-vlan 30
- name DEV
-vlan 40
- name PR
-vlan 50
- name Finance
-
-# Assign ports to VLANs
-interface range Fa0/1 - 2
- switchport mode access
- switchport access vlan 10
-
-interface range Fa0/3 - 4
- switchport mode access
- switchport access vlan 20
-
-interface range Fa0/5 - 6
- switchport mode access
- switchport access vlan 30
-
-interface range Fa0/7 - 8
- switchport mode access
- switchport access vlan 40
-
-interface range Fa0/9 - 10
- switchport mode access
- switchport access vlan 50
-
-# Trunk connection to router
-interface GigabitEthernet0/1
- switchport mode trunk
-
-exit
-[conf switch.txt](https://github.com/user-attachments/files/23426042/conf.switch.txt)
-).
+See full configuration in [`switch-config.txt`]().
 
 ### 🔸 Router Sub-interfaces & ACLs
-See full configuration in [`router-config.txt`](router-config.txt).
+See full configuration in [`router-config.txt`]().
 
 ---
 
