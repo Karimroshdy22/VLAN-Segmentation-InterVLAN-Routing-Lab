@@ -1,0 +1,58 @@
+enable
+configure terminal
+
+
+vlan 10
+ name HR
+exit
+
+vlan 20
+ name Sales
+exit
+
+vlan 30
+ name DEV
+exit
+
+vlan 40
+ name PR
+exit
+
+vlan 50
+ name Finance
+exit
+
+interface range fa0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+ exit
+
+interface range fa0/3 - 4
+ switchport mode access
+ switchport access vlan 20
+ exit
+
+interface range fa0/5 - 6
+ switchport mode access
+ switchport access vlan 30
+ exit
+
+interface range fa0/7 - 8
+ switchport mode access
+ switchport access vlan 40
+ exit
+
+interface range fa0/9 - 10
+ switchport mode access
+ switchport access vlan 50
+ exit
+
+
+interface gigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40,50
+ no shutdown
+ exit
+
+end
+write memory

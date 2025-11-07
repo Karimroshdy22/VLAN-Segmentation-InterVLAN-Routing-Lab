@@ -1,0 +1,56 @@
+enable
+configure terminal
+
+interface gigabitEthernet0/1
+ no shutdown
+ exit
+
+interface gigabitEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ exit
+
+interface gigabitEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ exit
+
+interface gigabitEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+ exit
+
+interface gigabitEthernet0/1.40
+ encapsulation dot1Q 40
+ ip address 192.168.40.1 255.255.255.0
+ exit
+
+interface gigabitEthernet0/1.50
+ encapsulation dot1Q 50
+ ip address 192.168.50.1 255.255.255.0
+ exit
+
+----
+configure terminal
+
+ip access-list extended ISOLATE_VLAN30
+ deny ip 192.168.30.0 0.0.0.255 192.168.0.0 0.0.255.255
+ permit ip 192.168.30.0 0.0.0.255 192.168.30.0 0.0.0.255
+exit
+
+ip access-list extended ISOLATE_VLAN40
+ deny ip 192.168.40.0 0.0.0.255 192.168.0.0 0.0.255.255
+ permit ip 192.168.40.0 0.0.0.255 192.168.40.0 0.0.0.255
+exit
+
+----
+interface gigabitEthernet0/1.30
+ ip access-group ISOLATE_VLAN30 out
+ exit
+
+interface gigabitEthernet0/1.40
+ ip access-group ISOLATE_VLAN40 out
+ exit
+
+
+
