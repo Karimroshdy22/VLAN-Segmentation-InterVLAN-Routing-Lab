@@ -1,0 +1,55 @@
+
+---
+
+## 🧾 **switch-config.txt**
+```bash
+enable
+conf t
+
+! VLAN Creation
+vlan 10
+ name HR
+vlan 20
+ name DEV
+vlan 30
+ name Research
+vlan 40
+ name PR
+vlan 50
+ name Finance
+exit
+
+! Assign Ports to VLANs
+interface range fa0/1-2
+ switchport mode access
+ switchport access vlan 10
+exit
+
+interface range fa0/3-4
+ switchport mode access
+ switchport access vlan 20
+exit
+
+interface range fa0/5-6
+ switchport mode access
+ switchport access vlan 30
+exit
+
+interface range fa0/7-8
+ switchport mode access
+ switchport access vlan 40
+exit
+
+interface range fa0/9-10
+ switchport mode access
+ switchport access vlan 50
+exit
+
+! Trunk Port (Connected to Router)
+interface gig0/1
+ switchport mode trunk
+exit
+
+! Save Configuration
+end
+wr
