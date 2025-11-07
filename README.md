@@ -19,7 +19,8 @@ The topology was created in **Cisco Packet Tracer**, and it includes:
 ---
 
 ## 🧩 Topology
-![Network Topology](topology.png)
+<img width="1316" height="690" alt="Topology" src="https://github.com/user-attachments/assets/a63ecbd3-8fb5-41d5-8c86-1bb84d4f5144" />
+
 
 ---
 
