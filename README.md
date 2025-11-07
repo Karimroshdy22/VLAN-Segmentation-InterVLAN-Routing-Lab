@@ -27,10 +27,10 @@ The topology was created in **Cisco Packet Tracer**, and it includes:
 ## ⚙️ Devices Configuration
 
 ### 🔸 VLAN Configuration on Switch
-See full configuration in [`switch-config.txt`](conf router.txt).
+See full configuration in [`conf switch.txt`](conf%20switch.txt).
 
 ### 🔸 Router Sub-interfaces & ACLs
-See full configuration in [`router-config.txt`]().
+See full configuration in [`conf router.txt`](conf%20router.txt).
 
 ---
 
