@@ -1,6 +1,6 @@
 # VLAN Segmentation & Inter-VLAN Routing Lab
 
-## 🔍 Overview
+##  Overview
 This lab demonstrates how to configure VLAN segmentation, inter-VLAN routing using the **Router-on-a-Stick** method, and VLAN isolation using **Access Control Lists (ACLs)**.
 
 The topology was created in **Cisco Packet Tracer**, and it includes:
@@ -10,7 +10,7 @@ The topology was created in **Cisco Packet Tracer**, and it includes:
 
 ---
 
-## 🧠 Objectives
+##  Objectives
 - Configure VLANs on a Layer 2 Switch.
 - Implement Inter-VLAN routing using sub-interfaces on a Router.
 - Assign static IPs to PCs within each VLAN.
@@ -18,13 +18,13 @@ The topology was created in **Cisco Packet Tracer**, and it includes:
 
 ---
 
-## 🧩 Topology
+##  Topology
 <img width="1316" height="690" alt="Topology" src="https://github.com/user-attachments/assets/a63ecbd3-8fb5-41d5-8c86-1bb84d4f5144" />
 
 
 ---
 
-## ⚙️ Devices Configuration
+##  Devices Configuration
 
 ### 🔸 VLAN Configuration on Switch
 See full configuration in [`conf switch.txt`](conf%20switch.txt).
@@ -34,7 +34,7 @@ See full configuration in [`conf router.txt`](conf%20router.txt).
 
 ---
 
-## 🧾 IP Addressing Plan
+##  IP Addressing Plan
 | VLAN | Department | Network | Gateway | PCs Range |
 |------|-------------|----------|----------|------------|
 | 10 | HR | 192.168.10.0/24 | 192.168.10.1 | 192.168.10.2–192.168.10.3 |
@@ -45,7 +45,7 @@ See full configuration in [`conf router.txt`](conf%20router.txt).
 
 ---
 
-## 🚫 VLAN Isolation
+##  VLAN Isolation
 - VLANs 30 and 40 are **isolated** from all other VLANs using **ACLs**.
 - Other VLANs can communicate normally.
 
