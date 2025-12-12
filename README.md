@@ -53,6 +53,6 @@ See full configuration in [`conf router.txt`](conf%20router.txt).
 
 ## 👨‍💻 Project by
 **Name:** Karim Roshdy Mousa  
-**Bootcamp:** WE Innovate SOC  
+**Academy:** WE Innovate SOC  
 **Track:** Cybersecurity – SOC Analyst  
 **Tool Used:** Cisco Packet Tracer 
